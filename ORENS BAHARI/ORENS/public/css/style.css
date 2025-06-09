@@ -1,0 +1,1164 @@
+/* Reset dan Global Styles */
+:root {
+    --primary-color: #FFFFFF; /* Oranye utama */
+    --secondary-color: #ee7828; /* Coklat tua, misal untuk teks/aksen gelap */
+    --dark-bg: #2c2520; /* Warna gelap navbar/footer dari screenshot */
+    --light-bg: #FFFFFF;
+    --panel-dark: #4a3b31; /* Warna panel "Tentang Kami" kiri */
+    --panel-light: #fdfaf6; /* Warna panel "Tentang Kami" kanan (logo) */
+    --text-light: #000000;
+    --text-dark: #333333;
+    --text-muted: #6c757d;
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Montserrat', sans-serif; /* Untuk heading/logo */
+    --border-radius-card: 12px; /* Sudut melengkung kartu */
+    --container-padding: 0 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-dark);
+    line-height: 1.7;
+    background-color: #f4f4f4; /* Background umum halaman jika diperlukan */
+}
+
+.container {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: var(--container-padding);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+h2 {
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.3;
+}
+
+section {
+    padding: 60px 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container{
+    display:flex;          /* sejajarkan horizontal */
+    align-items:center;    /* vertikal tengah */
+    padding:10px 24px;     /* sedikit ruang kiri-kanan */
+    gap:8px;               /* jarak kecil antara <img> & teks */
+}
+
+/* Logo gambar */
+.logoo{
+    height:40px;           /* perkecil logo */
+    width:auto;
+    object-fit:contain;
+    flex-shrink:0;         /* biar nggak mengecil lagi */
+    margin:0;              /* reset margin default */
+}
+
+/* Teks “ORENS Bahari” */
+.logo{
+    margin:0;              /* hilangkan jarak default <p> */
+    font-family:var(--font-secondary);
+    font-size:1.8rem;
+    font-weight:700;
+    color:var(--text-light);
+    display:flex;
+    align-items:center;    /* kalau ada tinggi baris berbeda */
+    line-height:1;         /* rapat secara vertikal */
+}
+
+.logo .logo-subtitle{
+    font-weight:400;
+    margin-left:4px;       /* jarak mungil antara ORENS & Bahari */
+}
+
+/* Area link navigasi – terdorong ke kanan */
+.nav-links{
+    margin-left:auto;      /* trik: anak flex ini mendorong diri ke kanan */
+    display:flex;
+    align-items:center;
+}
+
+.nav-links ul{
+    list-style:none;
+    display:flex;
+    margin:0;
+    padding:0;
+}
+
+.nav-links li{margin-left:25px;}
+
+.nav-links a{
+    color:var(--text-light);
+    text-decoration:none;
+    font-weight:500;
+    transition:color .3s ease;
+}
+.cart-wrapper {
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  position: relative;
+  margin-left: 30px;
+}
+
+.cart-wrapper:hover {
+  color: #A0522D; /* Efek hover */
+}
+
+.nav-links a:hover{color:var(--secondary-color);}
+
+.menu-toggle {
+    display: none; /* Sembunyikan di desktop */
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+/* Hero Section - Slider */
+.hero-section {
+    padding: 0; /* Hapus padding agar slider memenuhi */
+    background-color: var(--dark-bg); /* Background jika gambar tidak load sempurna */
+}
+
+.hero-slider .swiper-slide img {
+    width: 100%;
+    height: auto; /* Hapus height tetap */
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+/* Jika lengkung bawah untuk keseluruhan section */
+.hero-section .swiper-container {
+    border-radius: 0 0 var(--border-radius-card) var(--border-radius-card);
+    overflow: hidden; /* Penting untuk border-radius di swiper */
+}
+
+
+.hero-nav {
+    color: var(--primary-color) !important; /* Warna panah navigasi */
+    --swiper-navigation-size: 30px;
+}
+.hero-nav:after {
+    font-size: 20px !important;
+    font-weight: bold;
+}
+.hero-pagination .swiper-pagination-bullet-active {
+    background-color: var(--primary-color) !important; /* Warna pagination aktif */
+}
+
+/* Featured Section */
+.featured-section {
+    background-color: var(--light-bg); /* Warna latar belakang section ini */
+    padding-top: 40px; /* Kurangi padding atas karena ada lengkungan dari hero */
+    margin-top: -30px; /* Tarik ke atas agar menimpa lengkungan hero */
+    position: relative;
+    z-index: 10; /* Pastikan di atas hero */
+    border-radius: var(--border-radius-card) var(--border-radius-card) 0 0; /* Lengkung atas untuk section */
+}
+
+.featured-container {
+    display: flex;
+    gap: 40px; /* tambah jarak antar card */
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    padding: 10px 30px 20px 30px; /* kasih padding kiri kanan juga */
+    scroll-behavior: smooth;
+}
+
+.featured-card {
+    flex: 1 1 300px; /* Ubah ukuran card jadi lebih lebar */
+    max-width: 350px;
+    border-radius: var(--border-radius-card);
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+
+
+.featured-card img {
+    width: 100%;
+    height: 350px; /* Tinggi gambar kartu */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.featured-card:hover img {
+    transform: scale(1.05);
+}
+
+.drinks-card .card-title-drinks {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0,0,0,0.4);
+    color: var(--text-light);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: var(--font-secondary);
+}
+/* button menu */
+.btn-inside-card {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #A0522D;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 0.9;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-inside-card:hover {
+    background-color: #8B4513;
+    transform: translateX(-50%) scale(1.05);
+}
+/* About Section */
+.about-section {
+     background-color: var(--light-bg); /* Agar kontras dengan panel */
+}
+.about-container {
+    display: flex;
+    gap: 0; /* Tidak ada gap, panel bersentuhan */
+    flex-wrap: wrap;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border-radius: var(--border-radius-card);
+    overflow: hidden;
+}
+
+.about-content, .about-logo {
+    flex: 1 1 50%; /* Masing-masing 50% lebar */
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dark-panel {
+    background-color: var(--panel-dark);
+    color: var(--light-bg);
+}
+.dark-panel h2 {
+    color: var(--light-bg);
+    text-align: left;
+    margin-bottom: 5px;
+}
+.dark-panel h3 {
+    color: var(--light-bg);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-family: var(--font-primary); /* Sesuai desain, lebih ke Poppins */
+    font-weight: 600;
+}
+
+.light-panel {
+    background-color: var(--panel-light);
+    align-items: center; /* Pusatkan logo */
+}
+.light-panel img {
+    max-width: 200px; /* Ukuran logo ikon */
+}
+
+/* Why Us Section */
+.why-us-section {
+    background-color: var(--light-bg);
+}
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.reason-item {
+    text-align: center;
+    padding: 25px;
+    background-color: #fff; /* Bisa juga var(--light-bg) atau sedikit berbeda */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.reason-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.reason-icon-container {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+    background-color: var(--primary-color); /* Warna background ikon, jika ikonnya putih */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Jika ikon berupa gambar */
+}
+.reason-icon-container img { /* Jika ikon berupa gambar */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Jika ikon berupa FontAwesome:
+.reason-icon-container i {
+    font-size: 2.5rem;
+    color: var(--text-light);
+}
+*/
+
+.reason-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+.reason-item p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-bg);
+    color: #b0b0b0; /* Warna teks footer lebih terang */
+    padding-top: 50px;
+    font-size: 0.9rem;
+}
+
+.footer-main-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-column h3, .footer-column h4 {
+    color: var(--primary-color);
+    font-family: var(--font-secondary);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+.footer-brand img.halal-logo {
+    width: 40px; /* Sesuaikan ukuran logo halal */
+    margin-bottom: 10px;
+    float: right; /* Sesuai desain */
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: var(--primary-color);
+}
+
+.footer-social a {
+    font-size: 1.4rem;
+    margin-right: 15px;
+    display: inline-block; /* Untuk spasi yang benar */
+}
+.footer-social a:last-child {
+    margin-right: 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #444; /* Garis pemisah tipis */
+    color: #888;
+    font-size: 0.85rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .featured-card {
+        max-width: 100%; /* Satu kartu per baris di tablet */
+    }
+    .about-content, .about-logo {
+        flex-basis: 100%; /* Tumpuk di tablet */
+        text-align: center;
+    }
+    .about-content h2, .dark-panel h3 {
+        text-align: center;
+    }
+    .light-panel img {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+    .nav-links {
+        display: none; /* Sembunyikan menu utama */
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--dark-bg);
+        position: absolute;
+        top: 70px; /* Sesuaikan dengan tinggi navbar */
+        left: 0;
+        padding: 10px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    .nav-links.active {
+        display: flex; /* Tampilkan saat menu-toggle diklik */
+    }
+    .nav-links li {
+        margin: 10px 20px;
+        text-align: center;
+    }
+    .menu-toggle {
+        display: block; /* Tampilkan tombol hamburger */
+    }
+    .featured-container, .about-container, .reasons-grid, .footer-main-content {
+        grid-template-columns: 1fr; /* Semua jadi 1 kolom */
+        gap: 25px;
+    }
+    .footer-column {
+        text-align: center; /* Pusatkan konten footer di mobile */
+    }
+    .footer-social {
+        margin-top: 15px;
+    }
+    .footer-brand img.halal-logo {
+        float: none;
+        margin: 0 auto 10px auto;
+    }
+}
+
+.tentang-section {
+    padding: 60px 20px;
+    background-color: #fffaf0;
+}
+
+.tentang-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.tentang-text {
+    flex: 1 1 50%;
+}
+
+.tentang-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.tentang-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.tentang-image {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.tentang-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.contact-section {
+  padding: 60px 20px;
+  background-color: #fff7ed;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  color: #c2410c;
+  margin-bottom: 30px;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #5c4033;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #fb923c;
+  outline: none;
+}
+
+.btn-submit {
+  background-color: #f97316;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #ea580c;
+}
+
+.testimonial-section {
+  padding: 60px 20px;
+  background-color: #fef9f4;
+  text-align: center;
+}
+
+.testimonial-section h2 {
+  font-size: 2rem;
+  color: #d97706;
+  margin-bottom: 40px;
+}
+
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.testimonial-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  max-width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-card p {
+  font-style: italic;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.testimonial-card h4 {
+  color: #d97706;
+  font-weight: bold;
+  margin: 0;
+}
+/* ======================================================= */
+/* ===== CSS UNTUK MENU (DENGAN FOTO & TOMBOL CART) ===== */
+/* ======================================================= */
+.menu-item {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff;
+    gap: 16px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    gap: 30px;
+    align-items: center;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(160, 82, 45, 0.15);
+}
+
+.menu-item-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.menu-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-item-details {
+    flex-grow: 1;
+}
+
+.menu-item-header {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+}
+
+.menu-item-name {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.menu-item-line {
+    flex-grow: 1;
+    border-bottom: 2px dotted #ccc;
+    margin: 0 5px;
+}
+
+.menu-item-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #A0522D;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.menu-item-description {
+    margin-top: 8px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #777;
+    line-height: 1.5;
+}
+
+.add-to-cart-btn {
+    background-color: #FF8C00;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn i {
+    margin-right: 8px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #A0522D;
+}
+
+/* =================================== */
+/* ===== CSS UNTUK KERANJANG BELANJA (CART) ===== */
+/* =================================== */
+
+#cart-counter {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #FF8C00;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 2px solid #fff;
+    display: none;
+}
+
+.cart-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.cart-modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.cart-modal-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #888;
+}
+
+.cart-items {
+    padding: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.cart-item-modal {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.cart-item-modal img {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.cart-item-modal-details {
+    flex-grow: 1;
+}
+
+.cart-item-modal-details h4 {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+}
+
+.cart-item-modal-details p {
+    margin: 0;
+    color: #A0522D;
+    font-weight: 500;
+}
+
+.remove-item-btn {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.cart-modal-footer {
+    padding: 15px 20px;
+    border-top: 1px solid #ddd;
+    text-align: right;
+}
+
+.cart-total {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.checkout-btn {
+    background-color: #A0522D;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #FF8C00;
+}
+
+/* Responsive tambahan */
+@media (max-width: 768px) {
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu-item-image {
+        width: 100%;
+        height: 180px;
+    }
+}
+/* Tambahkan di paling bawah css/style.css */
+
+.payment-options-modal {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.payment-options-modal h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    text-align: left;
+    color: #333;
+}
+/* Menggunakan kembali style dari halaman checkout */
+#confirm-payment-btn-modal {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* Tampilan sukses di dalam modal */
+.success-view-modal {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.success-view-modal .fa-check-circle {
+    color: #28a745;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.success-view-modal h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.success-view-modal p {
+    color: #555;
+    margin-bottom: 25px;
+}
+/* ===== CSS UNTUK HALAMAN PEMBAYARAN QRIS TERPISAH ===== */
+.qris-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.qris-payment-card {
+    background-color: #fff;
+    text-align: center;
+    padding: 30px 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.qris-payment-card .qris-header img {
+    height: 35px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qris-payment-card h4 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.qris-payment-card .merchant-id {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.qris-payment-card .qris-code {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto 20px auto;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.qris-payment-card .qris-amount {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.qris-payment-card .qris-amount p { margin: 0; font-size: 0.9rem; }
+.qris-payment-card .qris-amount h3 { margin: 5px 0 0 0; color: #A0522D; font-size: 1.8rem; }
+
+.qris-payment-card .qris-timer {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.qris-payment-card .qris-instruction {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.4;
+}
+/* Menambahkan sedikit style untuk nomor antrian agar terlihat lebih menonjol */
+        .order-number-display {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            background-color: #f0f0f0;
+            padding: 15px 25px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border: 1px dashed #ccc;
+            text-align: center;
+        }
+        .order-number-display span {
+            font-size: 2.5rem;
+            color: #FFA500;
+            display: block;
+            margin-top: 5px;
+        }
+  /* Style khusus untuk halaman riwayat */
+        .history-section {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+        .history-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .history-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            padding: 25px;
+            border-left: 5px solid #FFA500;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .history-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        .history-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px dashed #e0e0e0;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        .history-header h3 {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+        }
+        .history-header .order-date {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .history-body ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 15px 0;
+        }
+        .history-body li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .history-body li:last-child {
+            border-bottom: none;
+        }
+        .history-footer {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e0e0e0;
+            text-align: right;
+        }
+        .history-footer strong {
+            font-size: 1.2em;
+            color: #FFA500;
+        }
+        .no-history {
+            text-align: center;
+            padding: 50px;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+        .no-history i {
+            font-size: 4em;
+            color: #e0e0e0;
+            margin-bottom: 20px;
+        }
+ /* CSS untuk logo full-screen & background */
+        #logo-trigger {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        #logo-trigger:hover {
+            transform: scale(1.05);
+        }
+        .logo-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            display: none; justify-content: center; align-items: center;
+            z-index: 1000;
+        }
+        .logo-overlay-content {
+            max-width: 70%; max-height: 70%;
+            width: auto; height: auto;
+        }
+        .logo-overlay .close-btn {
+            position: absolute; top: 20px; right: 40px;
+            color: white; font-size: 4rem; font-weight: bold;
+            cursor: pointer;
+        }
+        .about-logo.light-panel {
+            background-image: url('img/OrensLogo.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+     /* CSS untuk logo full-screen & background (tidak berubah) */
+        #logo-trigger {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        #logo-trigger:hover {
+            transform: scale(1.05);
+        }
+        .logo-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            display: none; justify-content: center; align-items: center;
+            z-index: 1000;
+        }
+        .logo-overlay-content {
+            max-width: 70%; max-height: 70%;
+            width: auto; height: auto;
+        }
+        .logo-overlay .close-btn {
+            position: absolute; top: 20px; right: 40px;
+            color: white; font-size: 4rem; font-weight: bold;
+            cursor: pointer;
+        }
+        .about-logo.light-panel {
+            background-image: url('../img/OrensLogo.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* CSS untuk kartu menu kotak (tidak berubah) */
+        .featured-container {
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 2rem; 
+            align-items: start; 
+        }
+        .featured-card {
+            width: 100%; 
+            aspect-ratio: 1 / 1; 
+            position: relative; 
+            overflow: hidden;
+        }
+        .featured-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+
+        /* CSS untuk Logo Halal */
+        .footer-main-content {
+            position: relative;
+        }
+        
+        /* [DIUBAH DISINI] - Ukuran dan Posisi Logo Halal Makin Besar */
+        .halal-logo {
+            width: 180px;      /* Diperbesar lagi */
+            height: auto;      /* Wajib auto agar tidak penyet */
+            position: absolute;
+            bottom: 110px;     /* Naikkan lagi posisinya */
+            right: 50px;       /* Sesuaikan lagi jaraknya */
+        }

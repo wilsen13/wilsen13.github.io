@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat Pesanan - Orens Bahari</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container navbar-container">
+            <img src="img/logokiriatas3.png" class="logoo">
+            <p class="logo">ORENS <span class="logo-subtitle">BAHARI</span></p>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentangKami.html">Tentang Kami</a></li>
+                    <li><a href="history.html">Riwayat</a></li>
+                    <li><a href="testimoni.html">Testimoni</a></li>
+                    <li><a href="hubungiKami.html">Hubungi Kami</a></li>
+                </ul>
+            </nav>
+            <div class="cart-wrapper" id="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-counter">0</span>
+            </div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="history-section">
+            <div class="container">
+                <h2 class="section-title">Riwayat Pesanan Anda</h2>
+                <p class="section-subtitle">Berikut adalah daftar semua pesanan yang pernah Anda lakukan.</p>
+                <div id="history-container" class="history-container">
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+         <div class="container footer-main-content">
+            <div class="footer-column footer-brand">
+                <img src="img/HalalGRemove.jpg" alt="Logo Halal" class="halal-logo">
+                <h3>ORENS BAHARI</h3>
+                <p>Jl. Curug Sangerang<br>Curug Sangerang, Kode Pos 12345</p>
+                <p>Telp: (021) 000-1111</p>
+                <p>Email: info@orensbahari.com</p>
+            </div>
+            <div class="footer-column">
+                <h4>TENTANG KAMI</h4>
+                <ul>
+                    <li><a href="#">Cerita Kami</a></li>
+                    <li><a href="#">Tim Kami</a></li>
+                    <li><a href="#">Karir</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>LAYANAN PELANGGAN</h4>
+                <ul>
+                    <li><a href="#">Cara Pesan</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#kontak">Hubungi Kami</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-social">
+                <h4>IKUTI KAMI</h4>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Orens Bahari. Semua Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const historyContainer = document.getElementById('history-container');
+        const orderHistory = JSON.parse(localStorage.getItem('orderHistory')) || [];
+
+        // --- Helper Functions ---
+        const formatRupiah = (number) => new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(number);
+        
+        const formatTanggal = (dateString) => {
+            const date = new Date(dateString);
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+            return date.toLocaleDateString('id-ID', options);
+        };
+
+        // --- Render Logic ---
+        if (orderHistory.length === 0) {
+            historyContainer.innerHTML = `
+                <div class="no-history">
+                    <i class="fas fa-history"></i>
+                    <h3>Anda Belum Punya Riwayat Pesanan</h3>
+                    <p>Silakan buat pesanan pertama Anda dari halaman menu kami.</p>
+                </div>
+            `;
+        } else {
+            orderHistory.forEach(order => {
+                const card = document.createElement('div');
+                card.className = 'history-card';
+
+                // Membuat daftar item
+                let itemsHtml = '<ul>';
+                order.items.forEach(item => {
+                    itemsHtml += `<li><span>${item.quantity}x ${item.name}</span> <span>${formatRupiah(item.price * item.quantity)}</span></li>`;
+                });
+                itemsHtml += '</ul>';
+
+                // Merakit kartu riwayat
+                card.innerHTML = `
+                    <div class="history-header">
+                        <h3>Pesanan #${order.id}</h3>
+                        <span class="order-date">${formatTanggal(order.date)}</span>
+                    </div>
+                    <div class="history-body">
+                        ${itemsHtml}
+                    </div>
+                    <div class="history-footer">
+                        <span>Metode: ${order.paymentMethod}</span> | 
+                        <strong>Total: ${formatRupiah(order.total)}</strong>
+                    </div>
+                `;
+                historyContainer.appendChild(card);
+            });
+        }
+
+        // --- Universal Scripts (Navbar & Footer Year) ---
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+        const currentYearElement = document.getElementById('current-year');
+        if (currentYearElement) {
+            currentYearElement.textContent = new Date().getFullYear();
+        }
+
+    });
+    </script>
+</body>
+</html>

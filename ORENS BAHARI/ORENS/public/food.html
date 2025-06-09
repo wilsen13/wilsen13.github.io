@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Orens Bahari</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container navbar-container">
+            <img src="img/logokiriatas3.png" class="logoo">
+            <p class="logo">ORENS <span class="logo-subtitle">BAHARI</span></p>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentangKami.html">Tentang Kami</a></li>
+                    <li><a href="testimoni.html">Testimoni</a></li>
+                    <li><a href="hubungiKami.html">Hubungi Kami</a></li>
+                </ul>
+            </nav>
+            <div class="cart-wrapper" id="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-counter">0</span>
+            </div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <h2 class="section-title">Lihat Semua Menu Kami</h2>
+                <p class="section-subtitle">Pilihan hidangan terbaik yang disiapkan khusus oleh chef kami dari bahan-bahan segar berkualitas.</p>
+                <div class="menu-grid"> 
+                    <div class="menu-category-title">
+                        <h3><i class="fas fa-fish"></i> Hidangan Laut (Seafood)</h3>
+                    </div>
+
+                
+                    <div class="menu-item">
+                        <div class="menu-item-image"><img src="img/bandeng.jpg" alt="Ikan Goreng"></div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Ikan Bandeng</h4>
+                                <div class="menu-item-line"></div><span class="menu-item-price">Rp 8.000</span>
+                            </div>
+                            <p class="menu-item-description">Ikan Bandeng Goreng.</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image"><img src="img/tongkol.jpg" alt="tongkol"></div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Ikan Tongkol</h4>
+                                <div class="menu-item-line"></div><span class="menu-item-price">Rp 8.000</span>
+                            </div>
+                            <p class="menu-item-description">Ikan Tongkol.</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image"><img src="img/cumi.jpg" alt="Cumi Goreng Tepung"></div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Cumi</h4>
+                                <div class="menu-item-line"></div><span class="menu-item-price">Rp 5.000</span>
+                            </div>
+                            <p class="menu-item-description">Cumi renyah di luar dan lembut di dalam, disajikan dengan saus tartar.</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image"><img src="img/lele.jpg" alt="lele"></div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Ikan Lele</h4>
+                                <div class="menu-item-line"></div><span class="menu-item-price">Rp 9.000</span>
+                            </div>
+                            <p class="menu-item-description">Ikan Lele</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-image"><img src="img/kerang.jpg" alt="Ikan Gurame Asam Manis"></div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Kerang</h4>
+                                <div class="menu-item-line"></div><span class="menu-item-price">Rp 4.000</span>
+                            </div>
+                            <p class="menu-item-description">Kerang</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+
+
+                    <div class="menu-category-title">
+                        <h3><i class="fas fa-drumstick-bite"></i> Hidangan Nusantara</h3>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image"><img src="img/sosis.png" alt="sosis"></div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Sosis Saus Tiram</h4>
+                                <div class="menu-item-line"></div><span class="menu-item-price">Rp 5.000</span>
+                            </div>
+                            <p class="menu-item-description">Sosis Saus Tiram</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image"><img src="img/kikil.png" alt="Kikil"></div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Kikil</h4>
+                                <div class="menu-item-line"></div><span class="menu-item-price">Rp 4.000</span>
+                            </div>
+                            <p class="menu-item-description">Kikil</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-image"><img src="img/perkedel.png" alt="perkedel"></div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Perkedel</h4>
+                                <div class="menu-item-line"></div><span class="menu-item-price">Rp 2.000</span>
+                            </div>
+                            <p class="menu-item-description">Perkedel</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image"><img src="img/tahu.png" alt="tahu"></div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Tahu</h4>
+                                <div class="menu-item-line"></div><span class="menu-item-price">Rp 2.000</span>
+                            </div>
+                            <p class="menu-item-description">Tahu</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image"><img src="img/tempe.png" alt="tempe"></div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Tempe</h4>
+                                <div class="menu-item-line"></div><span class="menu-item-price">Rp 2.000</span>
+                            </div>
+                            <p class="menu-item-description">Tempe</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image"><img src="img/tempe.png" alt="orek kering"></div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Tempe Orek Kering</h4>
+                                <div class="menu-item-line"></div><span class="menu-item-price">Rp 3.000</span>
+                            </div>
+                            <p class="menu-item-description">Tempe Orek Kering</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image"><img src="img/tempe.png" alt="orek basah"></div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Tempe Orek Basah</h4>
+                                <div class="menu-item-line"></div><span class="menu-item-price">Rp 3.000</span>
+                            </div>
+                            <p class="menu-item-description">Tempe Orek Basah</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image"><img src="img/gurame.jpg" alt="telur"></div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Telur Dadar</h4>
+                                <div class="menu-item-line"></div><span class="menu-item-price">Rp 5.000</span>
+                            </div>
+                            <p class="menu-item-description">Telur Dadar</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image"><img src="img/gurame.jpg" alt="Ikan Gurame Asam Manis"></div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Kentang Mustofa</h4>
+                                <div class="menu-item-line"></div><span class="menu-item-price">Rp 3.000</span>
+                            </div>
+                            <p class="menu-item-description">Kentang Mustofa</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image"><img src="img/gurame.jpg" alt="Ikan Gurame Asam Manis"></div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Kentang Balado</h4>
+                                <div class="menu-item-line"></div><span class="menu-item-price">Rp 3.000</span>
+                            </div>
+                            <p class="menu-item-description">Kentang Balado</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image"><img src="img/ayam goreng.png" alt="ayam goreng"></div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Ayam Goreng</h4>
+                                <div class="menu-item-line"></div><span class="menu-item-price">Rp 10.000</span>
+                            </div>
+                            <p class="menu-item-description">Ayam Goreng</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image"><img src="img/gurame.jpg" alt="Ikan Gurame Asam Manis"></div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Ayam Balado</h4>
+                                <div class="menu-item-line"></div><span class="menu-item-price">Rp 10.000</span>
+                            </div>
+                            <p class="menu-item-description">Ayam Balado</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image"><img src="img/ati.jpg" alt="Ikan Gurame Asam Manis"></div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Ati Ayam</h4>
+                                <div class="menu-item-line"></div><span class="menu-item-price">Rp 8.000</span>
+                            </div>
+                            <p class="menu-item-description">Ati Ayam</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image"><img src="img/gurame.jpg" alt="Ikan Gurame Asam Manis"></div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Otak-Otak</h4>
+                                <div class="menu-item-line"></div><span class="menu-item-price">Rp 3.000</span>
+                            </div>
+                            <p class="menu-item-description">Otak-Otak</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image"><img src="img/gurame.jpg" alt="Ikan Gurame Asam Manis"></div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Usus</h4>
+                                <div class="menu-item-line"></div><span class="menu-item-price">Rp 4.000</span>
+                            </div>
+                            <p class="menu-item-description">Usus</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-category-title">
+                        <h3><i class="fas fa-drumstick-bite"></i> Sayuran</h3>
+                    </div>
+
+                    <div class="menu-item">
+                    <div class="menu-item-image"><img src="img/Buncis.png" alt="buncis"></div>
+                    <div class="menu-item-details">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Sayur Buncis</h4>
+                            <div class="menu-item-line"></div><span class="menu-item-price">Rp 4.000</span>
+                        </div>
+                        <p class="menu-item-description">Usus</p>
+                        <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="img/Terong.png" alt="Sayur Terong"></div>
+                    <div class="menu-item-details">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Sayur Terong</h4>
+                            <div class="menu-item-line"></div><span class="menu-item-price">Rp 3.000</span>
+                        </div>
+                        <p class="menu-item-description">Usus</p>
+                        <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="img/tauge.png" alt="Sayur Toge"></div>
+                    <div class="menu-item-details">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Sayur Toge</h4>
+                            <div class="menu-item-line"></div><span class="menu-item-price">Rp 3.000</span>
+                        </div>
+                        <p class="menu-item-description">Usus</p>
+                        <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="img/Kangkung.png" alt="Sayur Kangkung"></div>
+                    <div class="menu-item-details">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Sayur Kangkung</h4>
+                            <div class="menu-item-line"></div><span class="menu-item-price">Rp 3.000</span>
+                        </div>
+                        <p class="menu-item-description">Usus</p>
+                        <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="img/Jamur.png" alt="Sayur Jamur"></div>
+                    <div class="menu-item-details">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Sayur Jamur</h4>
+                            <div class="menu-item-line"></div><span class="menu-item-price">Rp 3.000</span>
+                        </div>
+                        <p class="menu-item-description">Usus</p>
+                        <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="img/Caesim.png" alt="Sayur Caesim"></div>
+                    <div class="menu-item-details">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Sayur Caesim</h4>
+                            <div class="menu-item-line"></div><span class="menu-item-price">Rp 3.000</span>
+                        </div>
+                        <p class="menu-item-description">Usus</p>
+                        <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="img/sawi.png" alt="Sayur Sawi Hijau"></div>
+                    <div class="menu-item-details">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Sayur Sawi Hijau</h4>
+                            <div class="menu-item-line"></div><span class="menu-item-price">Rp 3.000</span>
+                        </div>
+                        <p class="menu-item-description">Usus</p>
+                        <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="img/Sawi putih.png" alt="Sayur Sawi Putih"></div>
+                    <div class="menu-item-details">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Sayur Sawi Putih</h4>
+                            <div class="menu-item-line"></div><span class="menu-item-price">Rp 3.000</span>
+                        </div>
+                        <p class="menu-item-description">Usus</p>
+                        <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="img/labu siam.png" alt="Sayur Labu Siam"></div>
+                    <div class="menu-item-details">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Sayur Labu Siam</h4>
+                            <div class="menu-item-line"></div><span class="menu-item-price">Rp 3.000</span>
+                        </div>
+                        <p class="menu-item-description">Usus</p>
+                        <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="img/.jpg" alt="Sayur Kacang Panjang"></div>
+                    <div class="menu-item-details">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Sayur Kacang Panjang</h4>
+                            <div class="menu-item-line"></div><span class="menu-item-price">Rp 3.000</span>
+                        </div>
+                        <p class="menu-item-description">Usus</p>
+                        <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="img/Capcay.png" alt="Sayur Capcay"></div>
+                    <div class="menu-item-details">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Sayur Capcay</h4>
+                            <div class="menu-item-line"></div><span class="menu-item-price">Rp 3.000</span>
+                        </div>
+                        <p class="menu-item-description">Usus</p>
+                        <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="img/Sop.png" alt="Sayur Sop"></div>
+                    <div class="menu-item-details">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Sayur Sop</h4>
+                            <div class="menu-item-line"></div><span class="menu-item-price">Rp 3.000</span>
+                        </div>
+                        <p class="menu-item-description">Usus</p>
+                        <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="img/daun singkong.png" alt="Sayur Daun Singkong"></div>
+                    <div class="menu-item-details">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Sayur Daun Singkong</h4>
+                            <div class="menu-item-line"></div><span class="menu-item-price">Rp 3.000</span>
+                        </div>
+                        <p class="menu-item-description">Usus</p>
+                        <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="img/sayur tahu.png" alt="Sayur Tahu"></div>
+                    <div class="menu-item-details">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Sayur Tahu</h4>
+                            <div class="menu-item-line"></div><span class="menu-item-price">Rp 2.000</span>
+                        </div>
+                        <p class="menu-item-description">Usus</p>
+                        <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+
+
+                    <div class="menu-category-title">
+                        <h3><i class="fas fa-drumstick-bite"></i> Camilan</h3>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image"><img src="img/gurame.jpg" alt="Ikan Gurame Asam Manis"></div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Gorengan Tempe</h4>
+                                <div class="menu-item-line"></div><span class="menu-item-price">Rp 1.000</span>
+                            </div>
+                            <p class="menu-item-description">Tempe di goreng tepung</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                      <div class="menu-item">
+                        <div class="menu-item-image"><img src="img/gurame.jpg" alt="Ikan Gurame Asam Manis"></div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Bakwan</h4>
+                                <div class="menu-item-line"></div><span class="menu-item-price">Rp 1.000</span>
+                            </div>
+                            <p class="menu-item-description">Bakwan</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                      <div class="menu-item">
+                        <div class="menu-item-image"><img src="img/gurame.jpg" alt="Ikan Gurame Asam Manis"></div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Lumpia</h4>
+                                <div class="menu-item-line"></div><span class="menu-item-price">Rp 2.000</span>
+                            </div>
+                            <p class="menu-item-description">Lumpia</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                      <div class="menu-item">
+                        <div class="menu-item-image"><img src="img/gurame.jpg" alt="Ikan Gurame Asam Manis"></div>
+                        <div class="menu-item-details">
+                            <div class="menu-item-header">
+                                <h4 class="menu-item-name">Kerupuk</h4>
+                                <div class="menu-item-line"></div><span class="menu-item-price">Rp 2.000</span>
+                            </div>
+                            <p class="menu-item-description">Kerupuk</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2 id="cart-title">Keranjang Belanja Anda</h2>
+                <button id="close-cart-modal" class="close-btn">&times;</button>
+            </div>
+            <div id="cart-dynamic-content">
+                <div id="cart-view">
+                    <div id="cart-items" class="cart-items"></div>
+                    <div class="cart-modal-footer">
+                        <div class="cart-total">
+                            <strong>Total:</strong>
+                            <span id="cart-total-price">Rp 0</span>
+                        </div>
+                        <div class="payment-options-modal">
+                            <h4>Pilih Metode Pembayaran:</h4>
+                            <label class="payment-option-label">
+                                <input type="radio" name="payment-method-modal" value="qris" checked>
+                                <div class="payment-option">
+                                    <img src="img/qrislogo.png" alt="QRIS Logo">
+                                    <span>QRIS</span>
+                                    <i class="fas fa-check-circle selected-icon"></i>
+                                </div>
+                            </label>
+                            <label class="payment-option-label">
+                                <input type="radio" name="payment-method-modal" value="cash">
+                                <div class="payment-option">
+                                    <i class="fas fa-money-bill-wave payment-icon"></i>
+                                    <span>Bayar di Kasir</span>
+                                    <i class="fas fa-check-circle selected-icon"></i>
+                                </div>
+                            </label>
+                        </div>
+                        <button id="confirm-payment-btn-modal" class="checkout-btn">Konfirmasi Pesanan</button>
+                    </div>
+                </div>
+                <div id="success-view-modal" class="success-view-modal" style="display: none;">
+                    <i class="fas fa-check-circle"></i>
+                    <h2 id="success-title-modal"></h2>
+                    <p id="success-message-modal"></p>
+                    <div id="order-number-container" class="order-number-display" style="display: none;">
+                        Nomor Antrian Anda:
+                        <span id="order-number-modal"></span>
+                    </div>
+                    <button id="back-to-menu-btn" class="btn-link-menu">Pesan Lagi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-main-content">
+            <div class="footer-column footer-brand">
+                <img src="img/HalalGRemove.jpg" alt="Logo Halal" class="halal-logo"> 
+                <h3>ORENS BAHARI</h3>
+                <p>Jl. Curug Sangerang<br>Curug Sangerang, Kode Pos 12345</p>
+                <p>Telp: (021) 000-1111</p>
+                <p>Email: info@orensbahari.com</p>
+            </div>
+            <div class="footer-column">
+                <h4>TENTANG KAMI</h4>
+                <ul>
+                    <li><a href="#">Cerita Kami</a></li>
+                    <li><a href="#">Tim Kami</a></li>
+                    <li><a href="#">Karir</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>LAYANAN PELANGGAN</h4>
+                <ul>
+                    <li><a href="#">Cara Pesan</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#kontak">Hubungi Kami</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-social">
+                <h4>IKUTI KAMI</h4>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Orens Bahari. Semua Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+    // GANTI SELURUH ISI SCRIPT KAMU DENGAN KODE YANG SUDAH DIPERBAIKI INI
+    document.addEventListener('DOMContentLoaded', function () {
+    // ===== [BAGIAN 1: DEKLARASI ELEMEN & DATA] =====
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const currentYearElement = document.getElementById('current-year');
+    const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+    const cartIcon = document.getElementById('cart-icon');
+    const cartCounter = document.getElementById('cart-counter');
+    const cartModal = document.getElementById('cart-modal');
+    const closeCartModalBtn = document.getElementById('close-cart-modal');
+    const cartItemsContainer = document.getElementById('cart-items');
+    const cartTotalPriceEl = document.getElementById('cart-total-price');
+    const cartTitle = document.getElementById('cart-title');
+    const cartView = document.getElementById('cart-view');
+    const successViewModal = document.getElementById('success-view-modal');
+    const confirmPaymentBtn = document.getElementById('confirm-payment-btn-modal');
+    const paymentOptionsContainer = document.querySelector('.payment-options-modal');
+    const qrisModal = document.getElementById('qris-modal');
+    const closeQrisModalBtn = document.getElementById('close-qris-modal');
+    const qrisTotalAmountEl = document.getElementById('qris-total-amount');
+    const orderNumberContainer = document.getElementById('order-number-container');
+    const orderNumberModalEl = document.getElementById('order-number-modal');
+    let cart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
+    let qrisTimerInterval;
+
+    // ===== [BAGIAN 2: FUNGSI-FUNGSI UTAMA] =====
+    const formatRupiah = (number) => new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(number);
+
+    function generateOrderNumber() {
+        let lastOrderNumber = parseInt(localStorage.getItem('lastOrderNumber')) || 0;
+        const newOrderNumber = lastOrderNumber + 1;
+        localStorage.setItem('lastOrderNumber', newOrderNumber);
+        return newOrderNumber;
+    }
+
+    // [FIXED] - Logika update UI diperbaiki di sini
+    function updateCartUI() {
+        renderCartItems();
+        const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+        const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        
+        if (totalQuantity > 0) {
+            cartCounter.innerText = totalQuantity;
+            cartCounter.style.display = 'block';
+        } else {
+            cartCounter.style.display = 'none';
+        }
+        
+        // Memperbarui total harga di modal utama dan modal QRIS
+        cartTotalPriceEl.innerText = formatRupiah(totalPrice);
+        if (qrisTotalAmountEl) qrisTotalAmountEl.innerText = formatRupiah(totalPrice);
+        
+        localStorage.setItem('shoppingCart', JSON.stringify(cart));
+    }
+
+    // [FIXED] - Fungsi ini sekarang hanya fokus render item
+    function renderCartItems() {
+        cartItemsContainer.innerHTML = '';
+        if (cart.length === 0) {
+            cartItemsContainer.innerHTML = '<p>Keranjang Anda masih kosong.</p>';
+            if(confirmPaymentBtn) confirmPaymentBtn.style.display = 'none';
+            if(paymentOptionsContainer) paymentOptionsContainer.style.display = 'none';
+        } else {
+            if(confirmPaymentBtn) confirmPaymentBtn.style.display = 'block';
+            if(paymentOptionsContainer) paymentOptionsContainer.style.display = 'block';
+            cart.forEach(item => {
+                const cartItemEl = document.createElement('div');
+                cartItemEl.classList.add('cart-item-modal');
+                cartItemEl.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="cart-item-modal-details">
+                        <h4>${item.name}</h4>
+                        <p>${item.quantity} x ${formatRupiah(item.price)}</p>
+                    </div>
+                    <button class="remove-item-btn" data-name="${item.name}">&times;</button>
+                `;
+                cartItemsContainer.appendChild(cartItemEl);
+            });
+        }
+    }
+
+    function addToCart(e) {
+        const menuItem = e.target.closest('.menu-item');
+        const name = menuItem.querySelector('.menu-item-name').innerText;
+        const priceText = menuItem.querySelector('.menu-item-price').innerText;
+        const image = menuItem.querySelector('.menu-item-image img').src;
+        const price = parseInt(priceText.replace(/[^0-9]/g, ''));
+        const existingItem = cart.find(item => item.name === name);
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            cart.push({ name, price, image, quantity: 1 });
+        }
+        updateCartUI();
+        alert(`${name} telah ditambahkan ke keranjang!`);
+    }
+
+    function handleCartItemActions(e) {
+        if (e.target.classList.contains('remove-item-btn')) {
+            const itemName = e.target.dataset.name;
+            cart = cart.filter(item => item.name !== itemName);
+            updateCartUI();
+        }
+    }
+
+    // GANTI FUNGSI LAMA DENGAN VERSI BARU INI
+function showSuccessScreenInModal(isCash, orderNumber) {
+    const title = successViewModal.querySelector('h2');
+    const message = successViewModal.querySelector('p');
+    
+    // [MODIFIKASI UTAMA DIMULAI DI SINI]
+    // 1. Simpan pesanan ke dalam riwayat SEBELUM keranjang dikosongkan
+    if (cart.length > 0) {
+        // Ambil riwayat yang sudah ada, atau buat array baru jika belum ada
+        const orderHistory = JSON.parse(localStorage.getItem('orderHistory')) || [];
+        
+        // Buat objek pesanan baru
+        const newOrder = {
+            id: orderNumber,
+            date: new Date().toISOString(), // Simpan tanggal dalam format standar
+            items: cart,
+            total: cart.reduce((sum, item) => sum + (item.price * item.quantity), 0),
+            paymentMethod: isCash ? 'Bayar di Kasir' : 'QRIS'
+        };
+
+        // Tambahkan pesanan baru ke awal array riwayat
+        orderHistory.unshift(newOrder);
+
+        // Simpan kembali array riwayat yang sudah diperbarui ke localStorage
+        localStorage.setItem('orderHistory', JSON.stringify(orderHistory));
+    }
+    // [MODIFIKASI SELESAI]
+
+    if (isCash) {
+        title.innerText = "Pesanan Diterima!";
+        message.innerText = "Silakan lakukan pembayaran di kasir. Pesanan Anda telah tersimpan di riwayat.";
+    } else {
+        title.innerText = "Pembayaran Berhasil!";
+        message.innerText = "Pesanan Anda sedang diproses dan telah tersimpan di riwayat.";
+    }
+    
+    orderNumberModalEl.innerText = orderNumber;
+    orderNumberContainer.style.display = 'block';
+    
+    cartView.style.display = 'none';
+    successViewModal.style.display = 'block';
+    cartTitle.innerText = "Status Pesanan";
+    
+    // Kosongkan keranjang setelah pesanan disimpan
+    cart = [];
+    updateCartUI();
+}
+    
+    function handleQrisPayment() {
+        const orderNumber = generateOrderNumber();
+        localStorage.setItem('pendingOrderNumber', orderNumber);
+
+        const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        localStorage.setItem('qrisPaymentAmount', totalPrice);
+        
+        window.open('qris-payment.html', '_blank');
+        
+        alert('Anda akan diarahkan ke tab baru untuk pembayaran QRIS. Setelah membayar, status pesanan akan terkonfirmasi di sini.');
+
+        cartModal.style.display = 'none';
+        
+        setTimeout(() => {
+            const confirmedOrderNumber = localStorage.getItem('pendingOrderNumber');
+            showSuccessScreenInModal(false, confirmedOrderNumber);
+            cartModal.style.display = 'block';
+            localStorage.removeItem('pendingOrderNumber');
+        }, 10000);
+    }
+
+    // ===== [BAGIAN 3: EVENT LISTENERS] =====
+    if (menuToggle) menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+    if (currentYearElement) currentYearElement.textContent = new Date().getFullYear();
+    addToCartButtons.forEach(button => button.addEventListener('click', addToCart));
+    cartItemsContainer.addEventListener('click', handleCartItemActions);
+    
+    cartIcon.addEventListener('click', () => {
+        cartView.style.display = 'block';
+        successViewModal.style.display = 'none';
+        orderNumberContainer.style.display = 'none';
+        cartTitle.innerText = "Keranjang Belanja Anda";
+        updateCartUI();
+        cartModal.style.display = 'block';
+    });
+    
+    closeCartModalBtn.addEventListener('click', () => cartModal.style.display = 'none');
+    
+    if(closeQrisModalBtn) {
+        closeQrisModalBtn.addEventListener('click', () => {
+            clearInterval(qrisTimerInterval);
+            qrisModal.style.display = 'none';
+        });
+    }
+
+    document.getElementById('back-to-menu-btn').addEventListener('click', () => {
+        cartModal.style.display = 'none';
+    });
+    
+    if(confirmPaymentBtn) {
+        confirmPaymentBtn.addEventListener('click', () => {
+            const selectedPayment = document.querySelector('input[name="payment-method-modal"]:checked');
+            if (!selectedPayment) {
+                alert('Silakan pilih metode pembayaran terlebih dahulu.');
+                return;
+            }
+            if (cart.length === 0) {
+                alert('Keranjang Anda kosong!');
+                return;
+            }
+
+            if (selectedPayment.value === 'qris') {
+                handleQrisPayment();
+            } else {
+                const orderNumber = generateOrderNumber();
+                showSuccessScreenInModal(true, orderNumber);
+            }
+        });
+    }
+    
+    updateCartUI();
+});
+    </script>
+</body>
+</html>

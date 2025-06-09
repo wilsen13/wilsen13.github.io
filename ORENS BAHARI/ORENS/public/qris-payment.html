@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran QRIS - Orens Bahari</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="qris-page-container">
+        <div class="qris-payment-card">
+            <div class="qris-header">
+                <img src="img/qrislogo.png" alt="QRIS">
+            </div>
+            <h4>ORENS BAHARI</h4>
+            <p class="merchant-id">NMID: ID1234567890123</p>
+            <img src="img/qrid.jpg" alt="Scan QR Code" class="qris-code">
+            <div class="qris-amount">
+                <p>Total Pembayaran</p>
+                <h3 id="qris-total-amount">Memuat...</h3>
+            </div>
+            <div id="qris-timer" class="qris-timer">
+                Batas Waktu Pembayaran: <strong>15:00</strong>
+            </div>
+            <p class="qris-instruction">Scan QR di atas dengan aplikasi E-Wallet Anda (Dana, GoPay, OVO, dll). Halaman ini akan menutup secara otomatis.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const qrisTotalAmountEl = document.getElementById('qris-total-amount');
+            const qrisTimerEl = document.getElementById('qris-timer').querySelector('strong');
+
+            // Ambil total harga dari localStorage yang dikirim oleh halaman sebelumnya
+            const totalAmount = localStorage.getItem('qrisPaymentAmount');
+            
+            const formatRupiah = (number) => new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(number);
+
+            if (totalAmount) {
+                qrisTotalAmountEl.innerText = formatRupiah(totalAmount);
+            }
+
+            // Logika Timer
+            let duration = 60 * 15; // 15 menit
+            let timerInterval = setInterval(() => {
+                let minutes = parseInt(duration / 60, 10);
+                let seconds = parseInt(duration % 60, 10);
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+                qrisTimerEl.textContent = `${minutes}:${seconds}`;
+
+                if (--duration < 0) {
+                    clearInterval(timerInterval);
+                    document.body.innerHTML = '<h1>Waktu Pembayaran Habis. Silakan coba lagi.</h1>';
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
